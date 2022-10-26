@@ -1,8 +1,7 @@
-const withPreact = require("next-plugin-preact");
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  experimental: { appDir: true },
   swcMinify: true,
   images: { domains: ["images.saatchiart.com"] },
   i18n: {
@@ -20,4 +19,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPreact(nextConfig);
+export default nextConfig;
