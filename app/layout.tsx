@@ -7,7 +7,6 @@ type RootLayoutProps = {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html>
-      <head></head>
       <body>{children}</body>
     </html>
   );
