@@ -1,4 +1,7 @@
+"use client";
+
 import "~/app/styles/globals.css";
+import { GraphqlProvider } from "~/lib/urql";
 
 type RootLayoutProps = {
   children: React.ReactNode;
@@ -7,7 +10,9 @@ type RootLayoutProps = {
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <GraphqlProvider>{children}</GraphqlProvider>
+      </body>
     </html>
   );
 };
